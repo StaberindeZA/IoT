@@ -37,20 +37,6 @@ exports.handler = function(event, context) {
             context.fail('status code: ' + res.statusCode);
         }
     });
-
-    var subject = 'Subject';
-
-    var params = {
-        attachments: [{
-            fallback: text_msg,
-            pretext: subject,
-            color: "#D00000",
-            fields: [{
-                "value": text_msg,
-                "short": false
-            }]
-        }]
-    };
     
     var json = {
         "text": text_msg
